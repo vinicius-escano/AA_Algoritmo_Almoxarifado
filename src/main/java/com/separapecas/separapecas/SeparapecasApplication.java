@@ -68,7 +68,7 @@ public class SeparapecasApplication implements CommandLineRunner {
         List<Produto> produtosQ5 = new ArrayList<>();
         List<Produto> listaOrdenada = new ArrayList<>();
 
-        System.out.print("\nSorting...\n");
+        System.out.print("\nOrganizando...\n");
         listProdutos.stream().forEach(p -> {
             prateleiras.stream().forEach(pr -> {
                 if (pr.getIdPrateleira().equals(getPrateleira(p.getLocalizacao()))) {

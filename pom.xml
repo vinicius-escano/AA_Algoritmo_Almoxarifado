@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.separapecas</groupId>
 	<artifactId>separapecas</artifactId>
@@ -15,7 +15,7 @@
 	<description>Logica separadora de peças</description>
 	<properties>
 		<java.version>11</java.version>
-		<repackage.classifier/>
+		<repackage.classifier />
 		<spring-native.version>0.12.1</spring-native.version>
 	</properties>
 	<dependencies>
@@ -28,7 +28,6 @@
 			<artifactId>spring-native</artifactId>
 			<version>${spring-native.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -49,8 +48,12 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 			<version>2.7.3</version>
 		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -113,7 +116,6 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
 	<profiles>
 		<profile>
 			<id>native</id>
@@ -156,5 +158,4 @@
 			</build>
 		</profile>
 	</profiles>
-
 </project>
